@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 18:49:16 PAGE     1
+A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 22:42:32 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.7.0
@@ -19,18 +19,18 @@ LOC  OBJ            LINE     SOURCE
                        9     ;------
 0506 E0               10     movx a, @dptr
 0507 780F             11     mov r0, #0fh
-0509 58               12     anl a,r0
-050A 902001           13     mov dptr, #2001h
-050D F0               14     movx @dptr,a
-050E 902000           15     mov dptr, #2000h
-0511 E0               16     movx a,@dptr
-0512 902002           17     mov dptr, #2002h
-0515 C4               18     swap a
+0509 C4               12     swap a
+050A 58               13     anl a,r0
+050B 902001           14     mov dptr, #2001h
+050E F0               15     movx @dptr,a
+050F 902000           16     mov dptr, #2000h
+0512 E0               17     movx a,@dptr
+0513 902002           18     mov dptr, #2002h
 0516 58               19     anl a,r0
 0517 F0               20     movx @dptr,a
 0518 80FE             21     ender: sjmp ender
                       22     end
-A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 18:49:16 PAGE     2
+A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 22:42:32 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------

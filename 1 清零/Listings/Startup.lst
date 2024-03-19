@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  STARTUP                                                              03/19/2024 18:53:38 PAGE     1
+A51 MACRO ASSEMBLER  STARTUP                                                              03/19/2024 18:58:37 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.7.0
@@ -17,7 +17,7 @@ LOC  OBJ            LINE     SOURCE
 3002 902000            7     mov dptr, #2000h
                        8               
 3005                   9     send: 
-3005 7400             10     mov a, #00h
+3005 74AB             10     mov a, #0ABh
 3007 F0               11     movx @dptr, a
 3008 A3               12     inc dptr 
 3009 08               13     inc r0
@@ -25,7 +25,7 @@ LOC  OBJ            LINE     SOURCE
 300B 70F8             15     jnz send
 300D 80FE             16     ender: sjmp ender
                       17     end
-A51 MACRO ASSEMBLER  STARTUP                                                              03/19/2024 18:53:38 PAGE     2
+A51 MACRO ASSEMBLER  STARTUP                                                              03/19/2024 18:58:37 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
