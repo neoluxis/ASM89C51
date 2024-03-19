@@ -1,0 +1,44 @@
+A51 MACRO ASSEMBLER  STARTUP                                                              03/19/2024 18:53:38 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Startup.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE Startup.a51 SET(SMALL) DEBUG PRINT(.\Listings\Startup.lst) OBJECT(.\Obj
+                      ects\Startup.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000h
+0000 023000            2     ljmp main
+                       3     
+3000                   4     org 3000h
+3000                   5     main: 
+3000 7800              6     mov r0, #00h
+3002 902000            7     mov dptr, #2000h
+                       8               
+3005                   9     send: 
+3005 7400             10     mov a, #00h
+3007 F0               11     movx @dptr, a
+3008 A3               12     inc dptr 
+3009 08               13     inc r0
+300A E8               14     mov a, r0
+300B 70F8             15     jnz send
+300D 80FE             16     ender: sjmp ender
+                      17     end
+A51 MACRO ASSEMBLER  STARTUP                                                              03/19/2024 18:53:38 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ENDER. . . . . . .  C ADDR   300DH   A   
+MAIN . . . . . . .  C ADDR   3000H   A   
+SEND . . . . . . .  C ADDR   3005H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

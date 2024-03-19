@@ -1,0 +1,48 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    03/19/2024  18:53:39  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Startup.obj TO .\Objects\Asm000 PRINT (.\Listings\Asm000.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Startup.obj (STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Asm000 (STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     300FH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Asm000 (STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        STARTUP
+  C:300DH         SYMBOL        ENDER
+  C:3000H         SYMBOL        MAIN
+  C:3005H         SYMBOL        SEND
+  C:0000H         LINE#         2
+  C:3000H         LINE#         6
+  C:3002H         LINE#         7
+  C:3005H         LINE#         10
+  C:3007H         LINE#         11
+  C:3008H         LINE#         12
+  C:3009H         LINE#         13
+  C:300AH         LINE#         14
+  C:300BH         LINE#         15
+  C:300DH         LINE#         16
+  -------         ENDMOD        STARTUP
+
+Program Size: data=8.0 xdata=0 code=12303
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

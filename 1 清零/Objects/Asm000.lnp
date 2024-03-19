@@ -1,0 +1,3 @@
+".\Objects\Startup.obj" 
+TO ".\Objects\Asm000" 
+PRINT(".\Listings\Asm000.m51") RAMSIZE(256) 
