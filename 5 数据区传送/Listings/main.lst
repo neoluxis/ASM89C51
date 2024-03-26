@@ -1,0 +1,69 @@
+A51 MACRO ASSEMBLER  MAIN                                                                 03/26/2024 10:44:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\main.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE main.a51 SET(SMALL) DEBUG PRINT(.\Listings\main.lst) OBJECT(.\Objects\m
+                      ain.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000h
+0000 020500            2     ljmp main
+                       3     
+0500                   4     org 0500h
+0500                   5     main:
+                       6     ; main loop
+                       7     ; Init params
+0500 7A20              8     mov r2, #20h
+0502 7B00              9     mov r3, #00h
+0504 7C30             10     mov r4, #30h
+0506 7D00             11     mov r5, #00h
+0508 7F20             12     mov r7, #20h
+050A 12051D           13     lcall init
+                      14     
+050D                  15     loop:
+050D 8A83             16     mov dph, r2
+050F 8B82             17     mov dpl, r3
+0511 E0               18     movx a, @dptr
+0512 8C83             19     mov dph, r4
+0514 8D82             20     mov dpl, r5
+0516 F0               21     movx @dptr, a
+0517 0B               22     inc r3
+0518 0D               23     inc r5
+0519 DFF2             24     djnz r7, loop
+                      25     
+051B 80FE             26     sjmp $
+                      27     
+                      28     ; User defined functions
+051D                  29     init: ; Init original data from 2000H
+051D 7401             30     mov a, #01h
+051F 902000           31     mov dptr, #2000h
+0522                  32     init_loop:
+0522 F0               33     movx @dptr, a
+0523 04               34     inc a
+0524 A3               35     inc dptr
+0525 B430FA           36     cjne a, #30h, init_loop
+0528 22               37     ret
+                      38     
+                      39     end
+A51 MACRO ASSEMBLER  MAIN                                                                 03/26/2024 10:44:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+INIT . . . . . . .  C ADDR   051DH   A   
+INIT_LOOP. . . . .  C ADDR   0522H   A   
+LOOP . . . . . . .  C ADDR   050DH   A   
+MAIN . . . . . . .  C ADDR   0500H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
