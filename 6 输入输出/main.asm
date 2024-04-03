@@ -1,9 +1,9 @@
 org 0000h
 ljmp main
 
-org 0500h
+org 0050h
 main:
-; main loop
+; main function
 
 
 sjmp $

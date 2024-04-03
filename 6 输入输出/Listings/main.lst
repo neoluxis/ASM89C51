@@ -1,0 +1,57 @@
+A51 MACRO ASSEMBLER  MAIN                                                                 03/29/2024 20:30:54 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\main.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE main.asm SET(SMALL) DEBUG PRINT(.\Listings\main.lst) OBJECT(.\Objects\m
+                      ain.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000h
+0000 020500            2     ljmp main
+                       3     
+0500                   4     org 0500h
+0500                   5     main:
+                       6     ; main function
+0500 7590FF            7     mov p1, #0ffh
+0503 758901            8     mov tmod, #01h
+0506 758C9C            9     mov th0, #9ch
+0509 758A40           10     mov tl0, #40h
+050C D28C             11     setb tr0
+050E D2A9             12     setb et0
+0510 D2AF             13     setb ea
+                      14     
+0512 80FE             15     sjmp $
+                      16     
+                      17     ; User defined functions
+0514                  18     timer_isr:
+0514 E590             19     mov a, p1
+0516 33               20     rlc a
+0517 F590             21     mov p1, a
+0519 32               22     reti
+                      23     
+                      24     end
+A51 MACRO ASSEMBLER  MAIN                                                                 03/29/2024 20:30:54 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+ET0. . . . . . . .  B ADDR   00A8H.1 A   
+MAIN . . . . . . .  C ADDR   0500H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TIMER_ISR. . . . .  C ADDR   0514H   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

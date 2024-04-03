@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 22:42:32 PAGE     1
+A51 MACRO ASSEMBLER  MAIN                                                                 03/26/2024 18:42:59 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.2.7.0
@@ -30,7 +30,7 @@ LOC  OBJ            LINE     SOURCE
 0517 F0               20     movx @dptr,a
 0518 80FE             21     ender: sjmp ender
                       22     end
-A51 MACRO ASSEMBLER  MAIN                                                                 03/19/2024 22:42:32 PAGE     2
+A51 MACRO ASSEMBLER  MAIN                                                                 03/26/2024 18:42:59 PAGE     2
 
 SYMBOL TABLE LISTING
 ------ ----- -------
