@@ -14,9 +14,9 @@ sjmp loop
 sjmp $
 	
 delay:
-mov r6, #255
+mov r6, #100
 delay1: 
-mov r7, #255
+mov r7, #250
 delay2: 
 djnz r7, delay2
 djnz r6, delay1
