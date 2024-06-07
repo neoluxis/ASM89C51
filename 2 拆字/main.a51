@@ -9,13 +9,13 @@ movx @dptr,a
 ;------
 movx a, @dptr
 mov r0, #0fh
+swap a
 anl a,r0
 mov dptr, #2001h
 movx @dptr,a
 mov dptr, #2000h
 movx a,@dptr
 mov dptr, #2002h
-swap a
 anl a,r0
 movx @dptr,a
 ender: sjmp ender

@@ -1,0 +1,55 @@
+A51 MACRO ASSEMBLER  MAIN                                                                 05/14/2024 17:44:47 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\main.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE main.asm SET(SMALL) DEBUG PRINT(.\Listings\main.lst) OBJECT(.\Objects\m
+                      ain.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000h
+0000 020050            2     ljmp main
+                       3     
+0013                   4     org 0013h
+0013 02005C            5     ljmp exti1
+                       6     
+0050                   7     org 0050h
+0050                   8     main:
+                       9     ; main function
+0050 74FF             10     mov a, #0ffh
+0052 D28A             11     setb it1
+0054 D2AA             12     setb ex1
+0056 D2AF             13     setb ea
+                      14     
+0058                  15     loop:
+0058 F590             16     mov p1, a
+005A 80FC             17     sjmp loop
+                      18     
+                      19     ; User defined functions
+005C                  20     exti1:
+005C 14               21     dec a
+005D 32               22     reti
+                      23     
+                      24     end
+A51 MACRO ASSEMBLER  MAIN                                                                 05/14/2024 17:44:47 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+EX1. . . . . . . .  B ADDR   00A8H.2 A   
+EXTI1. . . . . . .  C ADDR   005CH   A   
+IT1. . . . . . . .  B ADDR   0088H.2 A   
+LOOP . . . . . . .  C ADDR   0058H   A   
+MAIN . . . . . . .  C ADDR   0050H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

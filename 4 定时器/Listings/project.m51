@@ -1,0 +1,71 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    05/14/2024  17:12:23  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\project PRINT (.\Listings\project.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+
+
+LINK MAP OF MODULE:  .\Objects\project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     052BH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  B:00A8H.7       SYMBOL        EA
+  B:00A8H.1       SYMBOL        ET0
+  C:0525H         SYMBOL        FLOW
+  C:0500H         SYMBOL        MAIN
+  D:0090H         SYMBOL        P1
+  C:051DH         SYMBOL        T0_ISR
+  D:008CH         SYMBOL        TH0
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  C:0515H         SYMBOL        WHILE
+  C:0000H         LINE#         2
+  C:000BH         LINE#         5
+  C:0500H         LINE#         10
+  C:0502H         LINE#         11
+  C:0504H         LINE#         12
+  C:0506H         LINE#         13
+  C:0509H         LINE#         14
+  C:050CH         LINE#         15
+  C:050FH         LINE#         16
+  C:0511H         LINE#         17
+  C:0513H         LINE#         18
+  C:0515H         LINE#         20
+  C:0518H         LINE#         21
+  C:051BH         LINE#         22
+  C:051DH         LINE#         26
+  C:0520H         LINE#         27
+  C:0523H         LINE#         28
+  C:0524H         LINE#         29
+  C:0525H         LINE#         32
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  05/14/2024  17:12:23  PAGE 2
+
+
+  C:0527H         LINE#         33
+  C:0528H         LINE#         34
+  C:052AH         LINE#         35
+  -------         ENDMOD        MAIN
+
+Program Size: data=8.0 xdata=0 code=1323
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

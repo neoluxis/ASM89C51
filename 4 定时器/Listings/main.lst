@@ -1,0 +1,71 @@
+A51 MACRO ASSEMBLER  MAIN                                                                 05/14/2024 17:12:23 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\main.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE main.asm SET(SMALL) DEBUG PRINT(.\Listings\main.lst) OBJECT(.\Objects\m
+                      ain.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000h
+0000 020500            2     ljmp main
+                       3     
+000B                   4     org 000bh
+000B 02051D            5     ljmp t0_isr
+                       6     
+0500                   7     org 0500h
+0500                   8     main:
+                       9     ; main function
+0500 747F             10             mov a, #07fh
+0502 F590             11             mov p1, a
+0504 7814             12             mov r0, #20
+0506 758901           13             mov tmod, #01h
+0509 758C3C           14             mov th0, #3ch
+050C 758AAF           15             mov tl0, #0afh
+050F D28C             16             setb tr0
+0511 D2A9             17             setb et0
+0513 D2AF             18             setb ea
+0515                  19     while:
+0515 B800FD           20             cjne r0, #0, while
+0518 120525           21             lcall flow
+051B 80F8             22     sjmp while
+                      23     
+                      24     ; User defined functions
+051D                  25     t0_isr:
+051D 758C3C           26             mov th0, #3ch
+0520 758AAF           27             mov tl0, #0afh
+0523 18               28             dec r0
+0524 32               29             reti
+                      30     
+0525                  31     flow:
+0525 7814             32             mov r0, #20
+0527 03               33             rr a
+0528 F590             34             mov p1, a
+052A 22               35             ret
+                      36     end
+A51 MACRO ASSEMBLER  MAIN                                                                 05/14/2024 17:12:23 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+ET0. . . . . . . .  B ADDR   00A8H.1 A   
+FLOW . . . . . . .  C ADDR   0525H   A   
+MAIN . . . . . . .  C ADDR   0500H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+T0_ISR . . . . . .  C ADDR   051DH   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+WHILE. . . . . . .  C ADDR   0515H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
